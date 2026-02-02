@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Curiosity Weekends | Member Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:#0f172a;
+  color:#e5e7eb;
+}
+
+h1{
+  text-align:center;
+  margin:35px 15px 10px;
+  font-weight:600;
+  color:#f8fafc;
+}
+
+.subtitle{
+  text-align:center;
+  color:#94a3b8;
+  margin-bottom:30px;
+  font-size:14px;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+  display:grid;
+  gap:22px;
+}
+
+.card{
+  background:#020617;
+  border-radius:14px;
+  padding:22px;
+  border:1px solid #1e293b;
+  box-shadow:0 8px 18px rgba(0,0,0,.4);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+}
+
+.card h2{
+  margin:0 0 15px;
+  font-size:18px;
+  font-weight:600;
+  color:#e2e8f0;
+}
+
+label{
+  font-size:14px;
+  margin-top:14px;
+  display:block;
+  color:#cbd5f5;
+}
+
+input,select,textarea{
+  width:100%;
+  margin-top:6px;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #1e293b;
+  background:#020617;
+  color:#f8fafc;
+  font-size:14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  outline:none;
+  border-color:#60a5fa;
+}
+
+textarea{resize:vertical}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-size:15px;
+  font-weight:500;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#1d4ed8;
+}
+
+.success{
+  text-align:center;
+  color:#22c55e;
+  display:none;
+  margin-top:12px;
+  font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Curiosity Weekends</h1>
+<p class="subtitle">Member Activity Report (Last 2 Months)</p>
+
+<form id="form">
+
+<div class="container">
+
+<!-- Basic -->
+<div class="card">
+<h2>Basic Information</h2>
+
+<label>Name</label>
+<input name="name" required>
+
+<label>Email</label>
+<input name="email" type="email" required>
+
+<label>Phone</label>
+<input name="phone">
+
+<label>Class</label>
+<input name="class">
+
+<label>Institution</label>
+<input name="institution">
+
+<label>Role</label>
+<select name="role">
+<option>Member</option>
+<option>Volunteer</option>
+<option>Mentor</option>
+<option>Leader</option>
+</select>
+</div>
+
+<!-- Study -->
+<div class="card">
+<h2>Study Circle</h2>
+
+<label>Part of Study Circle?</label>
+<select name="participation" id="sc">
+<option>No</option>
+<option>Yes</option>
+</select>
+
+<div id="scBox" style="display:none">
+
+<label>Which One?</label>
+<select name="studyCircle">
+<option>Mathematics</option>
+<option>Physics</option>
+<option>Others</option>
+</select>
+
+</div>
+</div>
+
+<!-- Attendance -->
+<div class="card">
+<h2>Attendance</h2>
+
+<label>Attendance</label>
+<select name="attendance">
+<option>Every Week</option>
+<option>2–3 Times / Month</option>
+<option>Rarely</option>
+</select>
+
+<label>Hours / Week</label>
+<input name="hours">
+
+<label>Main Activities</label>
+<input name="activities">
+</div>
+
+<!-- Projects -->
+<div class="card">
+<h2>Projects</h2>
+
+<label>Project Name</label>
+<textarea name="projects"></textarea>
+
+<label>Start Date</label>
+<input type="date" name="startDate">
+
+<label>Team</label>
+<input name="team">
+
+<label>Tools</label>
+<input name="tools">
+
+<label>Your Role</label>
+<input name="projectRole">
+
+<label>Status</label>
+<select name="status">
+<option>Completed</option>
+<option>Ongoing</option>
+<option>Paused</option>
+</select>
+
+<label>Outcome</label>
+<textarea name="outcome"></textarea>
+</div>
+
+<!-- Skills -->
+<div class="card">
+<h2>Skills</h2>
+
+<label>Skills Learned</label>
+<textarea name="skills"></textarea>
+
+<label>Software</label>
+<input name="software">
+
+<label>Hardware</label>
+<input name="hardware">
+
+<label>Soft Skills</label>
+<input name="softskills">
+</div>
+
+<!-- Programs -->
+<div class="card">
+<h2>Programs & Events</h2>
+
+<label>Participated?</label>
+<select name="program">
+<option>No</option>
+<option>Yes</option>
+</select>
+
+<label>Program Name</label>
+<input name="programName">
+
+<label>Organizer</label>
+<input name="organizer">
+
+<label>Date</label>
+<input type="date" name="date">
+
+<label>Place</label>
+<input name="place">
+
+<label>Role</label>
+<input name="eventRole">
+</div>
+
+<!-- Achievements -->
+<div class="card">
+<h2>Achievements</h2>
+
+<label>Any Achievement?</label>
+<select name="achievement">
+<option>No</option>
+<option>Yes</option>
+</select>
+
+<label>Event Name</label>
+<input name="eventName">
+
+<label>Prize</label>
+<input name="prize">
+
+<label>Date</label>
+<input type="date" name="awardDate">
+</div>
+
+<!-- Contribution -->
+<div class="card">
+<h2>Contribution</h2>
+
+<label>Innovation</label>
+<textarea name="innovation"></textarea>
+
+<label>Main Contribution</label>
+<textarea name="contribution"></textarea>
+
+<label>Mentored Others?</label>
+<input name="mentored">
+</div>
+
+<!-- Feedback -->
+<div class="card">
+<h2>Feedback</h2>
+
+<label>Challenges</label>
+<textarea name="challenges"></textarea>
+
+<label>Support Needed</label>
+<textarea name="support"></textarea>
+
+<label>Suggestions</label>
+<textarea name="suggestions"></textarea>
+</div>
+
+<!-- Impact -->
+<div class="card">
+<h2>Impact</h2>
+
+<label>How CW Helped</label>
+<textarea name="helped"></textarea>
+
+<label>Main Benefit</label>
+<textarea name="benefit"></textarea>
+</div>
+
+<!-- Future -->
+<div class="card">
+<h2>Future Plans</h2>
+
+<label>Goals</label>
+<textarea name="goals"></textarea>
+
+<label>New Projects</label>
+<textarea name="newProjects"></textarea>
+
+<label>Skills to Learn</label>
+<textarea name="learnSkills"></textarea>
+</div>
+
+<!-- Submit -->
+<div class="card">
+
+<label>
+<input type="checkbox" name="declaration" required>
+ I confirm all information is correct
+</label>
+
+<button type="submit">Submit Report</button>
+
+<p class="success">✅ Report submitted successfully!</p>
+
+</div>
+
+</div>
+</form>
+
+<script>
+
+const form=document.getElementById("form");
+const success=document.querySelector(".success");
+const sc=document.getElementById("sc");
+const scBox=document.getElementById("scBox");
+
+const URL="https://script.google.com/macros/s/AKfycbz-7hJVklSo6mAHq7VpthLUfGClqjuVF9DgBbgqMPcCECwzycj4y2jyfJTfmFX_RXPaKA/exec";
+
+sc.onchange=()=>scBox.style.display=sc.value==="Yes"?"block":"none";
+
+form.onsubmit=e=>{
+ e.preventDefault();
+
+ fetch(URL,{
+  method:"POST",
+  body:new FormData(form)
+ })
+ .then(()=>{
+  success.style.display="block";
+  form.reset();
+  window.scrollTo({top:0,behavior:"smooth"});
+ })
+ .catch(()=>alert("Submission failed. Try again"));
+};
+
+</script>
+
+</body>
+</html>
