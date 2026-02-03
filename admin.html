@@ -9,18 +9,16 @@
 
 <style>
 
-/* ========== BASE ========== */
-
 *{box-sizing:border-box}
 
 body{
   margin:0;
   font-family:Inter,sans-serif;
-  background:linear-gradient(160deg,#020617,#020617,#020617);
+  background:#020617;
   color:#e5e7eb;
 }
 
-/* ========== LOGIN ========== */
+/* LOGIN */
 
 #login{
   height:100vh;
@@ -39,10 +37,6 @@ body{
   text-align:center;
 }
 
-.login-box h2{
-  margin-bottom:22px;
-}
-
 .login-box input{
   width:100%;
   padding:12px;
@@ -50,7 +44,6 @@ body{
   border:1px solid #1e293b;
   background:#020617;
   color:#fff;
-  font-size:14px;
 }
 
 .login-box button{
@@ -61,7 +54,6 @@ body{
   border-radius:8px;
   background:#2563eb;
   color:white;
-  font-weight:500;
   cursor:pointer;
 }
 
@@ -69,8 +61,7 @@ body{
   background:#1d4ed8;
 }
 
-
-/* ========== DASHBOARD ========== */
+/* DASHBOARD */
 
 #dashboard{
   display:none;
@@ -79,26 +70,14 @@ body{
   margin:auto;
 }
 
-/* Header */
+/* Top */
 
 .top{
   display:flex;
   justify-content:space-between;
-  align-items:center;
   margin-bottom:25px;
   flex-wrap:wrap;
   gap:15px;
-}
-
-.title h1{
-  margin:0;
-  font-size:24px;
-}
-
-.title p{
-  margin:3px 0 0;
-  color:#94a3b8;
-  font-size:14px;
 }
 
 /* Controls */
@@ -106,7 +85,6 @@ body{
 .controls{
   display:flex;
   gap:10px;
-  flex-wrap:wrap;
 }
 
 .controls input{
@@ -115,7 +93,6 @@ body{
   border:1px solid #1e293b;
   background:#020617;
   color:#fff;
-  font-size:13px;
 }
 
 .controls button{
@@ -125,13 +102,7 @@ body{
   background:#2563eb;
   color:white;
   cursor:pointer;
-  font-size:13px;
 }
-
-.controls button:hover{
-  background:#1d4ed8;
-}
-
 
 /* Stats */
 
@@ -148,20 +119,6 @@ body{
   border-radius:12px;
   padding:18px;
 }
-
-.stat h3{
-  margin:0;
-  font-size:13px;
-  color:#94a3b8;
-  font-weight:500;
-}
-
-.stat p{
-  margin:6px 0 0;
-  font-size:24px;
-  font-weight:600;
-}
-
 
 /* Table */
 
@@ -180,13 +137,9 @@ table{
 th,td{
   padding:14px;
   text-align:left;
-  font-size:14px;
 }
 
 th{
-  background:#020617;
-  color:#cbd5f5;
-  font-weight:500;
   border-bottom:1px solid #1e293b;
 }
 
@@ -198,44 +151,27 @@ tr:hover td{
   background:#020617cc;
 }
 
-/* Mobile */
+/* Delete Button */
 
-@media(max-width:700px){
+.del-btn{
+  background:#dc2626;
+  border:none;
+  color:white;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:12px;
+}
 
-  .top{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  table,thead,tbody,tr,td,th{
-    display:block;
-  }
-
-  thead{display:none}
-
-  tr{
-    border-bottom:1px solid #1e293b;
-    padding:10px 0;
-  }
-
-  td{
-    border:none;
-    padding:6px 14px;
-    font-size:13px;
-  }
-
-  td:before{
-    content:attr(data-label);
-    display:block;
-    color:#94a3b8;
-    font-size:12px;
-  }
+.del-btn:hover{
+  background:#b91c1c;
 }
 
 </style>
 </head>
 
 <body>
+
 
 <!-- LOGIN -->
 <div id="login">
@@ -256,10 +192,9 @@ tr:hover td{
 <!-- DASHBOARD -->
 <div id="dashboard">
 
-<!-- Top -->
 <div class="top">
 
-  <div class="title">
+  <div>
     <h1>Curiosity Weekends</h1>
     <p>Admin Dashboard</p>
   </div>
@@ -299,6 +234,7 @@ tr:hover td{
   <th>Name</th>
   <th>Email</th>
   <th>Class</th>
+  <th>Action</th>
 </tr>
 </thead>
 
@@ -316,10 +252,23 @@ tr:hover td{
 /* CONFIG */
 
 const PASSWORD = "report0816";
-const URL = "https://script.google.com/macros/s/AKfycbz-7hJVklSo6mAHq7VpthLUfGClqjuVF9DgBbgqMPcCECwzycj4y2jyfJTfmFX_RXPaKA/exec";
+
+const URL =
+"https://script.google.com/macros/s/AKfycbz-7hJVklSo6mAHq7VpthLUfGClqjuVF9DgBbgqMPcCECwzycj4y2jyfJTfmFX_RXPaKA/exec";
 
 
 let allData = [];
+
+
+/* LOCAL STORAGE */
+
+function getDeleted(){
+  return JSON.parse(localStorage.getItem("deletedRows") || "[]");
+}
+
+function saveDeleted(arr){
+  localStorage.setItem("deletedRows",JSON.stringify(arr));
+}
 
 
 /* LOGIN */
@@ -343,13 +292,18 @@ function login(){
 }
 
 
-/* LOAD */
+/* LOAD DATA */
 
 function loadData(){
 
   fetch(URL)
   .then(r=>r.json())
   .then(data=>{
+
+    let deleted = getDeleted();
+
+    // Remove deleted rows
+    data = data.filter(d=>!deleted.includes(d.date));
 
     allData = data.reverse();
 
@@ -358,7 +312,7 @@ function loadData(){
     document.getElementById("updated").innerText =
       new Date().toLocaleTimeString();
 
-    render(data);
+    render(allData);
 
   });
 
@@ -370,7 +324,8 @@ function loadData(){
 function render(data){
 
   const tbody = document.getElementById("data");
-  tbody.innerHTML = "";
+
+  tbody.innerHTML="";
 
   data.forEach(d=>{
 
@@ -378,16 +333,40 @@ function render(data){
 
     tr.innerHTML = `
 
-      <td data-label="Date">${new Date(d.date).toLocaleString()}</td>
-      <td data-label="Name">${d.name}</td>
-      <td data-label="Email">${d.email}</td>
-      <td data-label="Class">${d.class}</td>
+      <td>${new Date(d.date).toLocaleString()}</td>
+      <td>${d.name}</td>
+      <td>${d.email}</td>
+      <td>${d.class}</td>
+
+      <td>
+        <button class="del-btn"
+        onclick="deleteRow('${d.date}')">
+        Delete
+        </button>
+      </td>
 
     `;
 
     tbody.appendChild(tr);
 
   });
+
+}
+
+
+/* DELETE */
+
+function deleteRow(id){
+
+  if(!confirm("Hide this entry from admin view?")) return;
+
+  let deleted = getDeleted();
+
+  deleted.push(id);
+
+  saveDeleted(deleted);
+
+  loadData();
 
 }
 
