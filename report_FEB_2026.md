@@ -1,29 +1,35 @@
 # 📊 Curiosity Weekends  
-## Monthly Executive Report – February 2026  
+## Full Monthly Report – Top 10 Detailed Contributions  
 **Reporting Period:** 01 Feb 2026 – 28 Feb 2026  
-**Source Data:** :contentReference[oaicite:0]{index=0}  
+**Source Data:** :Check In and Check Out Reports 
 
 ---
 
-# 1. Executive Overview
+# 1. Executive Summary
 
-February 2026 was a technically intensive and high-engagement month at Curiosity Weekends.  
-The month focused on:
+February 2026 was a high-intensity month combining:
 
-- AI product development  
-- Machine vision experimentation  
-- Robotics prototyping  
-- Web & frontend/backend architecture  
-- Academic mentoring & study sessions  
-- Lab infrastructure organization  
+- AI & Machine Vision Development  
+- Robotics & Embedded Systems Prototyping  
+- Full-Stack Web Application Development  
+- Product Architecture & System Structuring  
+- Academic Mentorship & Study Ecosystem  
+- Lab Infrastructure Strengthening  
 
-A total of **259 entries** were recorded, reflecting strong community participation and structured work tracking.
+### Key Operational Metrics
+
+- **Total Log Entries:** 259  
+- **Printer Usage:** 612 prints  
+- **New Cartridge Installed:** February 1  
+- **Remaining Cartridge:** 40%  
+- **3D Printer:** Serviced, repaired, and restarted  
+- **Internet:** Mostly stable, with intermittent disruptions recorded on multiple days  
+
+This report provides a detailed breakdown of the **Top 10 contributors** based on total work hours and impact.
 
 ---
 
-# 2. Top 10 Contributors (By Total Work Hours)
-
-Below are the top 10 contributors based on total calculated work hours (Check-in to Check-out duration).
+# 2. Top 10 Contributors (By Total Hours)
 
 | Rank | Name | Total Hours | Equivalent Full Days |
 |------|------|------------|----------------------|
@@ -40,218 +46,210 @@ Below are the top 10 contributors based on total calculated work hours (Check-in
 
 ---
 
-# 3. Detailed Contribution Summary – Top 10
-
-## 1. Harsharaj Shetty B
-- Core system architecture restructuring  
-- Indoor navigation platform logic  
-- Data normalization & route management design  
-- Healthcare & product stack clarification  
-- High-cognitive system design days  
-- Client works & structural scalability improvements  
-
-**Impact:** Major backend and system architecture backbone contributor.
+# 3. Detailed Work Report – Top 10 Members
 
 ---
 
-## 2. Afkar
+## 1️⃣ Harsharaj Shetty B  
+**Total Contribution:** 172.58 hours  
+
+### Major Contributions:
+- Core system-level architectural restructuring  
+- Indoor navigation platform design  
+- Route normalization and data modeling  
+- Backend–frontend architecture alignment  
+- Scalability and maintainability improvements  
+- Client-oriented system structuring  
+- **Completed Web App for Better Life Foundation India**  
+- TRL mapping and product positioning clarity  
+
+### Technical Nature of Work:
+- High cognitive load system design  
+- Structural abstraction planning  
+- Data flow refinement  
+- Long-term maintainability decisions  
+
+### Impact:
+Harsharaj played a primary architectural role, transforming system structure from fragmented logic to scalable and organized architecture, including completing a deployable web application.
+
+---
+
+## 2️⃣ Afkar  
+**Total Contribution:** 136.65 hours  
+
+### Major Contributions:
 - Check-in/Checkout system UI upgrade  
-- DDLC development & debugging  
+- DDLC development and debugging  
 - Jetson webcam issue resolution  
-- Pico WiFi mapping experiments  
-- Internship & infrastructure setup  
-- Lab bench organization & hardware structuring  
+- Pico WiFi mapping experimentation  
+- L298N motor driver debugging  
+- Lab workbench setup and infrastructure optimization  
+- Internship preparation and technical development  
+- **Co-conducted Basic Introduction to Robotics Workshop**  
 
-**Impact:** Operational leadership + full-stack development + infrastructure optimization.
+### Infrastructure & Leadership:
+- Organized workspace structure  
+- Improved internal tracking systems  
+- Conducted robotics foundational training  
+- Managed technical troubleshooting sessions  
+
+### Impact:
+Afkar contributed across development, infrastructure, robotics mentoring, and system-level debugging, acting as both technical contributor and operational facilitator.
 
 ---
 
-## 3. Jacob George
-- AI Lypsync backend & frontend  
-- Product architecture discussions  
+## 3️⃣ Jacob George  
+**Total Contribution:** 47.60 hours  
+
+### Major Contributions:
+- AI Lypsync backend development  
 - Flutter frontend development  
-- Git workflow improvements  
-- DDLC frontend v1  
+- DDLC frontend v1 implementation  
+- Git workflow optimization  
+- Product architecture discussions  
+- Callyzer integration work  
 
-**Impact:** AI product and frontend architecture contributor.
-
----
-
-## 4. Ahban
-- Lab organization  
-- Python coding sessions  
-- Snake game development  
-- Cleaning & workspace maintenance  
-- Consistent technical presence  
-
-**Impact:** Lab discipline + coding continuity support.
+### Impact:
+Jacob played a key role in AI product and frontend development, bridging backend logic and UI architecture.
 
 ---
 
-## 5. Mohandas Vayalamkuzhy Upendran
-- Multiple project meetings  
-- Product discussions  
-- Harsharaj coordination sessions  
-- Strategic planning contributions  
+## 4️⃣ Ahban  
+**Total Contribution:** 47.17 hours  
 
-**Impact:** Planning & cross-project coordination.
+### Major Contributions:
+- Python development sessions  
+- Snake game implementation  
+- Lab cleaning & organization  
+- Hardware workspace maintenance  
+- **Co-conducted Robotics Workshop**  
+- Assisted in structured coding sessions  
 
----
-
-## 6. Mohammed Misbahuddeen
-- Gas Leakage Detector project  
-- Breadboard implementation  
-- Report interface design  
-- Completion milestone  
-- Interface testing & refinement  
-
-**Impact:** Hardware + documentation-integrated execution.
+### Impact:
+Ahban ensured technical continuity while also strengthening foundational robotics education and maintaining disciplined lab standards.
 
 ---
 
-## 7. Jemshid
+## 5️⃣ Mohandas Vayalamkuzhy Upendran  
+**Total Contribution:** 40.30 hours  
+
+### Major Contributions:
+- Cross-project meetings  
+- Architecture-level coordination  
+- Strategic discussions with core contributors  
+- Planning and structured supervision  
+
+### Impact:
+Played a strategic and coordination role across multiple projects, ensuring communication flow and execution alignment.
+
+---
+
+## 6️⃣ Mohammed Misbahuddeen  
+**Total Contribution:** 28.50 hours  
+
+### Major Contributions:
+- Gas Leakage Detector hardware build  
+- Breadboard circuit implementation  
+- Interface & report system development  
+- Testing and finalization  
+- Project documentation completion  
+
+### Impact:
+Successfully delivered a complete hardware + software integrated project with proper documentation and interface design.
+
+---
+
+## 7️⃣ Jemshid  
+**Total Contribution:** 24.65 hours  
+
+### Major Contributions:
 - Machine vision crude model  
-- Version 0 completion  
-- Virtual dubbing studio development  
-- Technical product discussions  
+- Version 0 completion milestone  
+- Virtual dubbing studio experiments  
+- AI prototyping sessions  
+- Experimental model refinement  
 
-**Impact:** AI experimentation & model prototyping.
+### Impact:
+Led early-stage AI and vision experimentation, achieving prototype-level completion.
 
 ---
 
-## 8. Amna Fathima
+## 8️⃣ Amna Fathima  
+**Total Contribution:** 23.28 hours  
+
+### Major Contributions:
 - WayFinder contributions  
-- Academic study sessions  
-- Peer collaboration  
 - Panorama documentation  
+- Academic collaboration  
+- Study ecosystem participation  
+- Peer mentoring involvement  
 
-**Impact:** Academic engagement + project support.
-
----
-
-## 9. Aparna K V
-- Data collection meetings  
-- Project discussions  
-- Coordination sessions  
-
-**Impact:** Structured project communication & documentation support.
+### Impact:
+Strengthened academic and documentation ecosystem within Curiosity Weekends.
 
 ---
 
-## 10. Mohammed Jazeel PM
-- Academic sessions  
+## 9️⃣ Aparna K V  
+**Total Contribution:** 17.67 hours  
+
+### Major Contributions:
+- Data collection  
+- Structured meetings  
+- Project coordination  
+- Documentation discussions  
+
+### Impact:
+Supported structured project communication and ensured data-driven coordination.
+
+---
+
+## 🔟 Mohammed Jazeel PM  
+**Total Contribution:** 16.27 hours  
+
+### Major Contributions:
+- Academic study sessions  
 - Debate participation  
 - Collaborative learning  
-- Study-oriented lab usage  
+- Statistics and subject preparation  
 
-**Impact:** Active academic participant & engagement contributor.
-
----
-
-# 4. Other Contributors (Collective Summary)
-
-All remaining contributors collectively supported the ecosystem through:
-
-- IT exam preparation  
-- Mathematics & Biology workshops  
-- Physics study sessions  
-- Debate & discussion activities  
-- VR learning exposure  
-- Robotics remote control car project  
-- NodeMCU hardware implementation  
-- Internship collaboration  
-- Study group mentoring  
-
-Notable names among additional contributors include:
-
-- Haya Fathima  
-- Farhath  
-- Thamanna  
-- Arshad  
-- Ameen  
-- Abdulla Sahad  
-- Mohammed Sinan A R  
-- Shivendh  
-- Suprajith  
-- Ishan  
-- Ayshath Afnana  
-- Ayshath Fida  
-- Anurag  
-- Asiya Minnah  
-- Fathima Husna  
-- Mariyam Zaima  
-- Vivek  
-- Others recorded in log  
-
-These participants primarily engaged in:
-
-- Academic learning  
-- Robotics testing  
-- Hardware table experiments  
-- Project meetings  
-- Short duration technical sessions  
-
-**Collective Impact:**  
-They strengthened the collaborative culture, ensured lab utilization efficiency, and maintained consistent academic and project engagement.
+### Impact:
+Contributed to academic environment and peer-based knowledge exchange.
 
 ---
 
-# 5. Technical Achievements of the Month
+# 4. Infrastructure & Services Summary
 
-## AI & Machine Vision
-- Lypsync backend development  
-- Model experimentation  
-- Architecture refinement  
-- Version 0 machine vision milestone  
+## 🖨 Printer
+- 612 total prints  
+- Cartridge installed Feb 1  
+- 40% ink remaining  
+- High academic and documentation usage  
 
-## Robotics & Hardware
-- Gas Leakage Detector completion  
-- Low Battery Indicator circuit  
-- NodeMCU remote control car  
-- Pico WiFi mapping experiments  
-- L298N motor driver debugging  
+## 🖨 3D Printer
+- Serviced and repaired  
+- Restarted successfully  
+- Prototyping capability restored  
 
-## Software & Systems
-- DDLC frontend v1  
-- Admin architecture restructuring  
-- Route logic generation  
-- UI upgrade of check-in system  
-- Flutter integration experiments  
-
-## Infrastructure & Lab Management
-- Workbench setup  
-- Equipment organization  
-- Table restructuring  
-- Structured meeting zones  
-- Internet resource optimization  
+## 🌐 Internet
+- Mostly stable  
+- Intermittent disruptions recorded across multiple days  
+- Productivity maintained through offline development during outages  
 
 ---
 
-# 6. Performance Assessment
+# 5. Overall Assessment
 
-| Category | Status |
-|-----------|--------|
-| Technical Depth | High |
-| Architecture Maturity | Improving Strongly |
-| Participation Level | Strong |
-| Innovation | Growing |
-| Infrastructure Usage | Efficient |
-| Academic Integration | Active |
+February 2026 demonstrated:
 
----
+- Strong architectural maturity  
+- Real-world application delivery  
+- Robotics experimentation  
+- Infrastructure maintenance  
+- Community-based knowledge sharing  
+- Structured lab ecosystem development  
 
-# 7. Conclusion
+The Top 10 contributors drove both strategic and execution-level progress, significantly elevating technical depth and system stability.
 
-February 2026 was a structurally significant month marked by:
-
-- Strong architectural progress  
-- AI & product experimentation  
-- Robotics prototyping  
-- Active academic ecosystem  
-- Consistent lab utilization  
-
-The top 10 contributors drove system-level and product-level progress, while the broader community ensured learning continuity, collaboration, and healthy lab engagement.
-
-Curiosity Weekends continues to evolve from a workspace into a structured innovation ecosystem.
+Curiosity Weekends continues progressing toward becoming a structured innovation and product development ecosystem.
 
 ---
